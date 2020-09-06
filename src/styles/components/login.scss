@@ -1,0 +1,64 @@
+.login-page {
+  display: flex;
+  position: relative;
+  @include centralise-items;
+  @include full-size;
+  @include no-space;
+
+  .login-component {
+    position: relative;
+    width: 50%;
+    height: 75vh;
+    margin-top: 12.5vh;
+
+    @media (max-width: $tablet-size) {
+      width: 75%;
+    }
+    @media (max-width: $mobile-size) {
+      width: 90%;
+    }
+
+    .login-box {
+      @include full-size;
+      @include display-col;
+      background-color: $white;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+      position: relative;
+      @include centralise-items;
+
+      h1 {
+        position: relative;
+        margin-top: 20px;
+        top: 0;
+        font-size: 2.6rem;
+      }
+      .login-form {
+        @include display-col;
+        position: relative;
+        @include full-size;
+        @include centralise-items;
+
+        .form-item {
+          margin: 20px auto;
+          width: 50%;
+
+          @media (max-width: $tablet-size) {
+            width: 60%;
+          }
+          @media (max-width: $mobile-size) {
+            width: 80%;
+          }
+          .ant-form-item-control {
+            height: 70px;
+          }
+        }
+
+        .submit-button {
+          width: 100px;
+          height: 37px;
+          margin: 20px;
+        }
+      }
+    }
+  }
+}

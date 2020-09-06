@@ -1,0 +1,29 @@
+html,
+body {
+  @include full-size;
+  @include no-space;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+body {
+  background: $colour-bg1;
+  background: $colour-bg2;
+  background-size: cover;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+main {
+  min-height: 100vh;
+}

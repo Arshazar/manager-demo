@@ -1,0 +1,135 @@
+.header {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  height: 8vh;
+}
+
+.users-list {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  top: 8vh;
+  background-color: $white;
+  width: 90vw;
+  margin: auto;
+  border-radius: 2em;
+  box-sizing: border-box;
+
+  .list-container {
+    width: 100%;
+    border: 2px solid $white;
+    border-radius: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+    .list-table {
+      width: 100%;
+      height: 65vh;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin: 10px;
+      overflow-x: auto;
+
+      .column-list {
+        display: flex;
+        width: 1190px;
+        height: 50px;
+        border-bottom: 2px solid $white;
+
+        &-elements {
+          display: flex;
+          text-align: center;
+          width: 100%;
+          height: 100%;
+
+          div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 100%;
+            font-weight: bold;
+          }
+        }
+      }
+      .row-list {
+        display: flex;
+        flex-direction: column;
+        width: 1190px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        margin: 0;
+        height: 100%;
+
+        &-elements {
+          display: flex;
+          width: 1190px;
+
+          div {
+            display: flex;
+            height: 50px;
+            position: relative;
+            align-items: center;
+            border-bottom: 1px solid $white;
+
+            .link {
+              margin-left: 25px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .loading {
+        display: flex;
+        height: 100%;
+        @include centralise-items;
+        font-size: 2em;
+      }
+    }
+  }
+}
+
+    // column and row list elements
+.column-list-elements #nu1,
+.row-list-elements #nu1 {
+  width: 70px;
+}
+
+.column-list-elements #nu2,
+.column-list-elements #nu3,
+.row-list-elements #nu2 ,
+.row-list-elements #nu3,
+.column-list-elements #nu6,
+.row-list-elements #nu6 {
+  width: 160px;
+}
+
+.column-list-elements #nu4,
+.row-list-elements #nu4 {
+  width: 250px;
+}
+
+.column-list-elements #nu5,
+.row-list-elements #nu5 {
+  width: 120px;
+}
+
+
+.column-list-elements #nu7,
+.column-list-elements #nu8,
+.column-list-elements #nu9,
+.row-list-elements #nu7,
+.row-list-elements #nu8,
+.row-list-elements #nu9 {
+  width: 90px;
+}
+
+.column-list-elements div p,
+.row-list-elements div p {
+  margin-top: auto;
+  margin-left: 5px;
+}

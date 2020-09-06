@@ -1,0 +1,28 @@
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+
+  button {
+    width: 100px;
+  }
+  .submit-button {
+    margin-right: 10px;
+  }
+}
+
+.search-bar {
+  display: flex;
+  position: relative;
+  top: 8vh;
+  right: 5vw;
+  justify-content: flex-end;
+  img {
+    cursor: pointer;
+  }
+}
+
+.edit-user {
+  .form-item {
+    margin: 5px;
+  }
+}

@@ -1,0 +1,72 @@
+.header {
+  width: 100%;
+  background-color: transparent;
+  height: 8vh;
+  top: 0;
+  right: 0;
+
+  .button {
+    background-color: transparent;
+    text-decoration: none;
+    padding: 0;
+    margin: 1.1rem 0 1.1rem 1rem;
+    font-size: 1.1em;
+    color: $white;
+    border: 2px solid transparent;
+
+    &:hover,
+    &.active {
+      border-bottom: 2px solid $white;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 1rem;
+
+    .nav-button {
+      display: none;
+      @media (max-width: $mobile-size) {
+        display: flex;
+      }
+      .toggle-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 24px;
+        width: 30px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        box-sizing: border-box;
+        &:focus {
+          outline: none;
+        }
+        &__line {
+          width: 30px;
+          height: 2px;
+          background: $white;
+        }
+      }
+    }
+
+    &-items {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      .button {
+        cursor: pointer;
+      }
+      @media (max-width: $mobile-size) {
+        display: none;
+      }
+    }
+  }
+
+  .spacer {
+    flex: 1;
+  }
+}
