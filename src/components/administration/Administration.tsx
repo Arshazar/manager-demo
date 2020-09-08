@@ -8,7 +8,7 @@ import { ProfileModal } from '../modals/ProfileModal'
 import { EditModal } from '../modals/EditModal'
 import { useCustomSWR } from '../../api/useCustomSWR'
 import { adminAPI } from '../../api/api'
-import { UserTable } from './UserTable'
+import { UsersTable } from './UsersTable'
 import { UsersInterface } from '../../types/users.types'
 import { tokenModifier } from '../../api/tokenModifier'
 
@@ -83,7 +83,7 @@ export const Administration = (): JSX.Element => {
                     <img width="44px" src={require('../../images/search-bar.svg')} alt="search" />
                 </button>
             </div>
-            <UserTable
+            <UsersTable
                 data={data}
                 current_page={current_page}
                 setCurrent={setCurrent}

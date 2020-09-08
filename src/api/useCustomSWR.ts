@@ -6,15 +6,7 @@ import { UsersInterface } from '../types/users.types'
 import { tokenModifier } from './tokenModifier'
 
 export const useCustomSWR = (props: CustomSWRType): UsersInterface[] => {
-    const {
-        current_page,
-        isFilter,
-        loadedUser,
-        isUserEdited,
-        setEditUser,
-        loadUser,
-        onDataError,
-    } = props
+    const { current_page, isFilter, loadedUser, isUserEdited, setEditUser, onDataError } = props
     const states = useSelector((state) => state)
     const { filter } = states.filter
 

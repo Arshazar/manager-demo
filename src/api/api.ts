@@ -19,9 +19,8 @@ export const loginAPI = (
             let token = resp.data.data.token
             const token_type = resp.data.data.token_type
             token = token_type + ' ' + token
-            router.push('/dashboard').then(() => {
-                tokenModifier({ action: 'set', token })
-            })
+            router.push('/dashboard')
+            tokenModifier({ action: 'set', token })
         })
         .catch(() => {
             reduceState(setError, 'Login failed, try again!')
