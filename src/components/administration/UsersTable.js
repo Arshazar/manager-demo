@@ -1,7 +1,5 @@
 import React from 'react'
-import { Pagination, Table } from 'antd'
-import { UserTableInterface } from '../../types/app.types'
-import { UsersInterface } from '../../types/users.types'
+import { Table } from 'antd'
 
 export const UsersTable = ({
     data,
@@ -9,10 +7,10 @@ export const UsersTable = ({
     setCurrent,
     loadUser,
     setEditShow,
-}: UserTableInterface): JSX.Element => {
+}) => {
     const total = 6868
 
-    const toggleEditor = ([loadedUser]: UsersInterface[]) => {
+    const toggleEditor = ([loadedUser]) => {
         loadUser(loadedUser)
         setEditShow(true)
     }
